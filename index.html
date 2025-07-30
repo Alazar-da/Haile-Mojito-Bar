@@ -40,7 +40,7 @@
 </head>
 <body class="bg-primary text-accent font-sans">
     <!-- Navigation -->
-    <nav class="container mx-auto bg-secondary sticky top-0 z-50 shadow-lg">
+    <nav class="bg-secondary sticky top-0 z-50 shadow-lg">
         <div class=" px-4 flex justify-between items-center">
             <a href="#" class=""><img src="./images/Haile's Logo.png" alt="Haile's Mojito Bar Logo" class="h-14 inline-block" /></a>
 
@@ -90,13 +90,13 @@
         <h2 class="text-4xl font-bold text-center mb-16">OUR <span class="text-cyan-400">STORY</span></h2>
         
         <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <img src="./images/hero.jpg" alt="Haile's Mojito Bar interior" class="rounded-lg shadow-xl w-full h-auto">
+            <div class="lg:w-1/2 lg:block hidden">
+                <img src="./images/about.png" alt="Haile's Mojito Bar interior" class="rounded-lg shadow-xl w-full h-auto">
             </div>
             
-            <div class="md:w-1/2">
+            <div class="lg:w-1/2 container mx-auto">
                 <h3 class="text-2xl font-semibold mb-4">From Passion to Perfection</h3>
-                <p class="mb-6 text-slate-300">Founded in 2015 by Haile Martinez, our mojito bar has grown from a small passion project to a beloved destination for cocktail enthusiasts, staying true to our roots of crafting authentic mojitos.</p>
+                <p class="mb-6 text-slate-300 indent-5">Founded in 2015 by Haile Martinez, our mojito bar has grown from a small passion project to a beloved destination for cocktail enthusiasts, staying true to our roots of crafting authentic mojitos.</p>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                     <!-- Accessibility Features -->
@@ -145,7 +145,7 @@
 </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-20 bg-primary">
+    <section id="menu" class="py-20 bg-primary container mx-auto">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-4">OUR <span class="text-cyan-400">SIGNATURES</span></h2>
             <p class="text-center text-slate-300 max-w-2xl mx-auto mb-16">Explore our handcrafted mojito creations, each with its own unique twist on the classic</p>
@@ -200,8 +200,8 @@
     <!-- Gallery Section -->
 
     <!-- Contact Section -->
-<section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-  <div class="container mx-auto px-6">
+<section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white container mx-auto">
+  <div class="container mx-auto">
     <!-- Heading -->
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
@@ -261,9 +261,11 @@
         <!-- Social Links -->
         <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
         <div class="flex space-x-5">
-          <a href="#" class="text-gray-400 hover:text-cyan-400 text-2xl"><i class="fab fa-facebook"></i></a>
+          <!-- <a href="#" class="text-gray-400 hover:text-cyan-400 text-2xl"><i class="fab fa-facebook"></i></a> -->
           <a href="https://instagram.com/hailesmojitobar" target="_blank" class="text-gray-400 hover:text-cyan-400 text-2xl"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-gray-400 hover:text-cyan-400 text-2xl"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/251913229566" target="_blank" class="text-gray-400 hover:text-cyan-400 text-2xl" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
           <a href="https://www.tiktok.com/@hailes.mojito.bar" target="_blank" class="text-gray-400 hover:text-cyan-400 text-2xl"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
@@ -312,7 +314,7 @@
   <!-- Footer -->
 <footer class="bg-gray-900 text-gray-400 py-10">
   <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
       
       <!-- Logo & Description -->
       <div class="flex flex-col items-center md:items-start text-center md:text-left">
@@ -336,10 +338,12 @@
       <!-- Social & Credits -->
       <div class="flex flex-col items-center md:items-end">
         <div class="flex space-x-5 mb-4">
-          <a href="#" class="hover:text-cyan-400 text-xl transition"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="hover:text-cyan-400 text-xl transition"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="hover:text-cyan-400 text-xl transition"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="hover:text-cyan-400 text-xl transition"><i class="fab fa-tiktok"></i></a>
+   <a href="https://instagram.com/hailesmojitobar" target="_blank" class="text-gray-400 hover:text-cyan-400 text-2xl"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/251913229566" target="_blank" class="text-gray-400 hover:text-cyan-400 text-2xl" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+          <a href="https://www.tiktok.com/@hailes.mojito.bar" target="_blank" class="text-gray-400 hover:text-cyan-400 text-2xl"><i class="fab fa-tiktok"></i></a>
+        
         </div>
         <p class="text-sm">&copy; 2025 Haile's Mojito Bar. All rights reserved.</p>
         <p class="text-sm mt-2">
