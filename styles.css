@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 /* Slider Styles */
 .slider-container {
     position: relative;
@@ -21,3 +24,44 @@
     height: 400px;
     object-fit: contain;
 }
+
+   .menu-popup {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .menu-popup.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .menu-tab {
+            transition: all 0.3s ease;
+        }
+        .menu-tab.active {
+            background: rgba(14, 165, 233, 0.1);
+            border-bottom: 3px solid #0ea5e9;
+        }
+
+
+               .gallery-item {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .gallery-item:hover {
+            transform: translateY(-8px);
+        }
+        .lightbox {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox-image {
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+        .lightbox.active .lightbox-image {
+            transform: scale(1);
+        }
