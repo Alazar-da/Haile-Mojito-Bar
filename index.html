@@ -1,67 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haile's Mojito Bar | Crafted Cocktails & Relaxed Vibes</title>
-    <meta name="description" content="Experience the perfect blend of fresh ingredients, premium rum, and tropical vibes at Haile's Mojito Bar.">
-    <meta name="keywords" content="Mojito Bar, Cocktails, Rum, Tropical Vibes, Haile's Mojito Bar, Addis Ababa">
-    <meta name="author" content="Haile's Mojito Bar">
-    <link rel="icon" href="./images/Haile's Logo.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="./images/Haile's Logo.png">
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Fancybox CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <title>Haile's Mojito Bar | Crafted Cocktails & Relaxed Vibes</title>
+  <meta name="description" content="Discover premium mojitos and tropical cocktails at Haile's Mojito Bar in Addis Ababa. Chill vibes, fresh ingredients, and great taste." />
+  <meta name="author" content="Haile's Mojito Bar" />
+  
+  <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="Haile's Mojito Bar | Crafted Cocktails & Relaxed Vibes" />
+  <meta property="og:description" content="Discover premium mojitos and tropical cocktails at Haile's Mojito Bar in Addis Ababa. Chill vibes, fresh ingredients, and great taste." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hailesmojitobar.com/" />
+  <meta property="og:image" content="https://hailesmojitobar.com/images/logo 2.jpg" />
 
-<!-- Fancybox JS -->
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Haile's Mojito Bar | Crafted Cocktails & Relaxed Vibes" />
+  <meta name="twitter:description" content="Discover premium mojitos and tropical cocktails at Haile's Mojito Bar in Addis Ababa." />
+  <meta name="twitter:image" content="https://hailesmojitobar.com/images/logo 2.jpg" />
 
-   <script>
+  <!-- Favicon -->
+  <link rel="icon" href="/images/logo 2.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+  <!-- External Styles & Scripts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+  <!-- Tailwind Custom Config -->
+  <script>
     tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                /*     primary: '#0f172a', // slate-900
-                    secondary: '#1e293b', // slate-800
-                    accent: '#f8fafc', // slate-50 */
-                      'primary': '#0f172a',
-                        'secondary': '#1e293b',
-                        'accent': '#548FB2',
-                        'light-accent': '#A2D1E2',
-                },
-                container: {
-                    center: true,
-                    padding: '1rem',
-                    screens: {
-                        sm: '640px',
-                        md: '768px',
-                        lg: '1024px',
-                        xl: '1280px',
-                        '2xl': '1536px',
-                    }
-                },
-                 animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
-            }
-        }
-    }
-</script>
-    <link rel="stylesheet" href="styles.css">
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f172a',
+            secondary: '#1e293b',
+            accent: '#548FB2',
+            'light-accent': '#A2D1E2',
+          },
+          container: {
+            center: true,
+            padding: '1rem',
+            screens: {
+              sm: '640px',
+              md: '768px',
+              lg: '1024px',
+              xl: '1280px',
+              '2xl': '1536px',
+            },
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            float: 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="bg-primary text-white font-sans min-h-screen relative">
 
   <!--
@@ -710,40 +721,50 @@
           <span class="absolute bottom-0 left-0 w-20 h-0.5 bg-gradient-to-r from-sky-500 to-light-accent"></span>
         </h3>
         
-        <form id="contact-form" class="space-y-5" data-aos="fade-right">
-          <div class="relative">
-            <input type="text" id="name" name="name" required 
-                   class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
-                   placeholder=" ">
-            <label for="name" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">Your Name</label>
-          </div>
-          
-          <div class="relative">
-            <input type="email" id="email" name="email" required 
-                   class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
-                   placeholder=" ">
-            <label for="email" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">Email Address</label>
-          </div>
-          
-          <div class="relative">
-            <input type="text" id="subject" name="subject" required 
-                   class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
-                   placeholder=" ">
-            <label for="subject" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">Subject</label>
-          </div>
-          
-          <div class="relative">
-            <textarea id="message" name="message" rows="5" required 
-                      class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
-                      placeholder=" "></textarea>
-            <label for="message" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">Your Message</label>
-          </div>
-          
-          <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 font-bold py-3 px-6 rounded-lg text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-sky-500/20 flex items-center justify-center">
-            <span>Send Message</span>
-            <i class="fas fa-paper-plane ml-2"></i>
-          </button>
-        </form>
+        <form id="contact-form" class="space-y-5" data-aos="fade-right" action="contact-form.php" method="POST">
+  <div class="relative">
+    <input type="text" id="name" name="name" required 
+           class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
+           placeholder=" ">
+    <label for="name" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">
+      Your Name
+    </label>
+  </div>
+  
+  <div class="relative">
+    <input type="email" id="email" name="email" required 
+           class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
+           placeholder=" ">
+    <label for="email" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">
+      Email Address
+    </label>
+  </div>
+  
+  <div class="relative">
+    <input type="text" id="subject" name="subject" required 
+           class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
+           placeholder=" ">
+    <label for="subject" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">
+      Subject
+    </label>
+  </div>
+  
+  <div class="relative">
+    <textarea id="message" name="message" rows="5" required 
+              class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
+              placeholder=" "></textarea>
+    <label for="message" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">
+      Your Message
+    </label>
+  </div>
+  
+  <button type="submit"
+          class="w-full bg-sky-600 hover:bg-sky-700 font-bold py-3 px-6 rounded-lg text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-sky-500/20 flex items-center justify-center">
+    <span>Send Message</span>
+    <i class="fas fa-paper-plane ml-2"></i>
+  </button>
+</form>
+
       </div>
       <!-- <a href="https://maps.google.com?q=Haile's+Mojito+Bar" target="_blank" class="text-sky-400 hover:text-sky-300 flex items-center md:hidden">
             <i class="fas fa-external-link-alt mr-2"></i> Open in Maps
