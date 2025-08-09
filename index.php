@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,6 +79,17 @@
   <!--
   EMAIL Hailesmojitobar@gmail.com
   PASSWORD HMB1234# -->
+
+<!-- Success Message Popup -->
+<!-- <div id="successPopup" class="fixed inset-0 flex items-center justify-center bg-black/50 z-50 hidden">
+  <div class="bg-white text-black p-6 rounded-lg shadow-lg text-center">
+    <h2 class="text-xl font-semibold mb-2">Message Sent!</h2>
+    <p class="mb-4">Your message has been successfully submitted.</p>
+    <button onclick="closePopup()" class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded">Close</button>
+  </div>
+</div> -->
+
+
     <!-- Navigation -->
     <nav class="bg-secondary sticky top-0 z-50 shadow-lg">
         <div class=" px-4 flex justify-between items-center">
@@ -720,12 +732,12 @@
           Send a Message
           <span class="absolute bottom-0 left-0 w-20 h-0.5 bg-gradient-to-r from-sky-500 to-light-accent"></span>
         </h3>
-        
-        <form id="contact-form" class="space-y-5" data-aos="fade-right" action="contact-form.php" method="POST">
+
+      <form id="contact-form" class="space-y-5" data-aos="fade-right" action="/contact-form.php" method="POST">
   <div class="relative">
     <input type="text" id="name" name="name" required 
            class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
-           placeholder=" ">
+           placeholder="Enter Your Name">
     <label for="name" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">
       Your Name
     </label>
@@ -734,7 +746,7 @@
   <div class="relative">
     <input type="email" id="email" name="email" required 
            class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
-           placeholder=" ">
+           placeholder="Enter Your Email">
     <label for="email" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">
       Email Address
     </label>
@@ -743,7 +755,7 @@
   <div class="relative">
     <input type="text" id="subject" name="subject" required 
            class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
-           placeholder=" ">
+           placeholder="Enter Subject">
     <label for="subject" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">
       Subject
     </label>
@@ -752,7 +764,7 @@
   <div class="relative">
     <textarea id="message" name="message" rows="5" required 
               class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 peer placeholder-transparent"
-              placeholder=" "></textarea>
+              placeholder="Enter Your Message"></textarea>
     <label for="message" class="absolute left-4 -top-3 bg-gray-800/50 px-1 text-sm text-gray-300 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-sm peer-focus:text-sky-300">
       Your Message
     </label>
@@ -764,7 +776,16 @@
     <i class="fas fa-paper-plane ml-2"></i>
   </button>
 </form>
-
+<!-- Success Popup -->
+<div id="success-popup" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white text-gray-800 rounded-lg p-6 shadow-lg max-w-sm w-full text-center space-y-4">
+    <h2 class="text-xl font-semibold text-green-600">✅ Message Sent!</h2>
+    <p>Thank you for reaching out. We'll get back to you soon.</p>
+    <button onclick="closePopup()" class="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-2 px-4 rounded transition-all">
+      Close
+    </button>
+  </div>
+</div>
       </div>
       <!-- <a href="https://maps.google.com?q=Haile's+Mojito+Bar" target="_blank" class="text-sky-400 hover:text-sky-300 flex items-center md:hidden">
             <i class="fas fa-external-link-alt mr-2"></i> Open in Maps

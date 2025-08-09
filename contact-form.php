@@ -2,12 +2,13 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Load PHPMailer (via Composer or manually)
-require 'vendor/autoload.php'; // If using Composer
-// OR if not using Composer:
-// require 'PHPMailer-master/src/Exception.php';
-// require 'PHPMailer-master/src/PHPMailer.php';
-// require 'PHPMailer-master/src/SMTP.php';
+require 'PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
+
+
+
+require_once "vendor/autoload.php";
 
 $status = '';
 
@@ -53,7 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Email headers and content
         $mail->setFrom('MilkomiWeb@gmail.com', 'Milkomi Website');
-        $mail->addAddress('Hailesmojitobar@gmail.com', "Haile's Mojito Bar");
+/*         $mail->addAddress('Hailesmojitobar@gmail.com', "Haile's Mojito Bar"); */
+        $mail->addAddress('ale2abuye@gmail.com', "Haile's Mojito Bar");
 
         $mail->isHTML(true);
         $mail->Subject = $subject;
@@ -83,11 +85,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->AltBody = "Name: $name\nEmail: $email\nSubject: $subject\nMessage:\n$message";
 
         $mail->send();
-        echo "✅ Message has been sent successfully!";
-        // Optional: redirect or reload
-        // header("refresh:2");
+
+/*         if ($mail->send()) {
+    echo "<script>window.onload = function() { showPopup(); }</script>";
+} else {
+    echo "Mailer Error: " . $mail->ErrorInfo;
+} */
+    echo "<script>sessionStorage.setItem('contactSuccess', 'true'); window.location.href = window.location.href;</script>";
+exit;
+
     } catch (Exception $e) {
-        echo "❌ Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        echo "<script>alert('❌ Message could not be sent. Mailer Error: {$mail->ErrorInfo}');</script>";
+          $status = 'Message could not be sent. Please try again later';
+    header("refresh:2");
     }
 }
 ?>
