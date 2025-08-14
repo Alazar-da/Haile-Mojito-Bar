@@ -364,144 +364,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function showPopup() {
-    document.getElementById('success-popup').classList.remove('hidden');
-  }
+    document.getElementById('successPopup').classList.remove('hidden');
+}
 
-  function closePopup() {
-    document.getElementById('success-popup').classList.add('hidden');
-  }
+function closePopup() {
+    document.getElementById('successPopup').classList.add('hidden');
+}
 
-  // Show popup if PHP set the flag in session/localStorage
-  if (sessionStorage.getItem('contactSuccess') === 'true') {
-    showPopup();
-    sessionStorage.removeItem('contactSuccess');
-  }
+document.addEventListener("DOMContentLoaded", function () {
+    if (sessionStorage.getItem('contactSuccess') === 'true') {
+        showPopup();
+        sessionStorage.removeItem('contactSuccess');
+    }
+});
 
 
 
-            const checkbox = document.getElementById('cb2-7');
           
            
           
           
             
-              const form = document.getElementById('contact-form');
-          
-                   const nameInput = document.getElementById('name');
-                  const emailInput = document.getElementById('email');
-                
-                  const messageInput = document.getElementById('message');
-          
-            const errorName = document.getElementById('error-name');
-            const errorEmail = document.getElementById('error-email');
-          
-            const errorMessage = document.getElementById('error-message');
-          
             
-          
-          
-          
-          
-          
-            function validateName() {
-              let nameValue = nameInput.value.trim();
-          
-              if (nameValue === '') {
-                errorName.textContent = 'Please enter your name.';
-                return false;
-              }
-          
-              let nameRegex = /^[a-zA-Z\s]+$/;
-              if (!nameRegex.test(nameValue)) {
-                errorName.textContent = 'Name can only contain alphabets and spaces.';
-                return false;
-              }
-          
-              errorName.textContent = '';
-              return true;
-            } 
-          
-            function validateEmail() {
-              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-              if (!emailRegex.test(emailInput.value.trim())) {
-                errorEmail.textContent = 'Please enter a valid email address.';
-                return false;
-              } else {
-                errorEmail.textContent = '';
-                return true;
-              }
-            }
-          
-            
-          
-            function validateMessage() {
-              let messageValue = messageInput.value.trim();
-          
-              if (messageValue === '') {
-                errorMessage.textContent = 'Please enter a message.';
-                return false;
-              }
-          
-              let messageRegex = /^[a-zA-Z0-9\s]+$/;
-              if (!messageRegex.test(messageValue)) {
-                errorMessage.textContent = 'Message can only contain alphabets, numbers, and spaces.';
-                return false;
-              }
-          
-              errorMessage.textContent = '';
-              return true;
-            }
-          
-            async function handleSubmit(event) {
-              event.preventDefault();
-          
-              const isNameValid = validateName();
-              const isEmailValid = validateEmail();
-           
-              const isMessageValid = validateMessage();
-          
-              if (isNameValid && isEmailValid  && isMessageValid) {
-                try {
-                  const formData = {
-                    name: nameInput.value,
-                    email: emailInput.value,
-                   
-                    message: messageInput.value
-                  };
-          
-                  var xhttp = new XMLHttpRequest();
-                  xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                      var response = this.responseText;
-                      console.log(response);
-                    }
-                  };
-          
-                  xhttp.open("POST", "index.php", true);
-                  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          
-                  var params = Object.keys(formData).map(function(key) {
-                    return encodeURIComponent(key) + "=" + encodeURIComponent(formData[key]);
-                  }).join("&");
-          
-                  alert("message sent successfully")
-          
-                  xhttp.send(params);
-                } catch (error) {
-                  console.error('Error sending email:', error);
-                }
-              }
-            }
-            nameInput.addEventListener('change', validateName);
-          nameInput.addEventListener('blur', validateName);
-          
-          emailInput.addEventListener('change', validateEmail);
-          emailInput.addEventListener('blur', validateEmail);
-          
-          
-          
-          messageInput.addEventListener('change', validateMessage);
-          messageInput.addEventListener('blur', validateMessage);
-          
-            form.addEventListener('submit', handleSubmit);
-        

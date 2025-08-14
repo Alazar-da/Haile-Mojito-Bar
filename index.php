@@ -81,13 +81,13 @@
   PASSWORD HMB1234# -->
 
 <!-- Success Message Popup -->
-<!-- <div id="successPopup" class="fixed inset-0 flex items-center justify-center bg-black/50 z-50 hidden">
+<div id="successPopup" class="fixed inset-0 flex items-center justify-center bg-black/50 z-50 hidden">
   <div class="bg-white text-black p-6 rounded-lg shadow-lg text-center">
     <h2 class="text-xl font-semibold mb-2">Message Sent!</h2>
     <p class="mb-4">Your message has been successfully submitted.</p>
     <button onclick="closePopup()" class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded">Close</button>
   </div>
-</div> -->
+</div>
 
 
     <!-- Navigation -->
